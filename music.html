@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя Музыка - Project-Y</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+    <h1>Project-Y</h1>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="music.html" class="active-link">Музыка</a></li>
+            <li><a href="about.html">Об авторе</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="music-section">
+        <h1>Мой Плейлист</h1>
+        <p>Здесь собраны мои любимые треки</p>
+
+    </section>
+
+   <div style="text-align: center; margin: 30px 0;">
+    <button class="main-btn" onclick="shufflePlaylist()">🔀 Случайный трек</button>
+</div>
+
+<section class="features music-grid" id="playlist">
+    <div class="feature-item music-card">
+        <h3>Toxic till the end</h3>
+        <p>ROSE</p>
+        <audio src="music/Toxic_till_the_end.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(0)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(0)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>APT</h3>
+        <p>ROSE and Bruno Mars</p>
+        <audio src="music/APT.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(1)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(1)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Number one girl</h3>
+        <p>ROSE</p>
+        <audio src="music/number_one_girl.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(2)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(2)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>3am</h3>
+        <p>ROSE</p>
+        <audio src="music/3am.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(3)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(3)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Call it the end</h3>
+        <p>ROSE</p>
+        <audio src="music/call_it_the_end.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(4)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(4)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Dance all night</h3>
+        <p>ROSE</p>
+        <audio src="music/dance_all_night.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(5)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(5)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Drinks or coffee</h3>
+        <p>ROSE</p>
+        <audio src="music/drinks_or_coffee.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(6)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(6)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Gameboy</h3>
+        <p>ROSE</p>
+        <audio src="music/Gameboy.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(7)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(7)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Not the same</h3>
+        <p>ROSE</p>
+        <audio src="music/not_the_same.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(8)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(8)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Stay a little longer</h3>
+        <p>ROSE</p>
+        <audio src="music/Stay_a_little_longer.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(9)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(9)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Too bad for us</h3>
+        <p>ROSE</p>
+        <audio src="music/Too_bad_for_us.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(10)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(10)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Two years</h3>
+        <p>ROSE</p>
+        <audio src="music/Two_years.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(11)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(11)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>On The ground</h3>
+        <p>ROSE</p>
+        <audio src="music/On_The_ground.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(12)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(12)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Gone</h3>
+        <p>ROSE</p>
+        <audio src="music/Gone.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(13)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(13)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>Messy</h3>
+        <p>ROSE</p>
+        <audio src="music/Messy.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(14)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(14)">🔁</button>
+        </div>
+    </div>
+
+    <div class="feature-item music-card">
+        <h3>On my mind</h3>
+        <p>ROSE</p>
+        <audio src="music/On_My_Mind.mp3"></audio>
+        <div class="player-controls">
+            <button class="play-btn" onclick="togglePlay(15)">▶</button>
+            <button class="loop-btn" onclick="toggleLoop(15)">🔁</button>
+        </div>
+    </div>
+</section>
+
+   <script>
+    const audios = document.querySelectorAll('audio');
+    const playButtons = document.querySelectorAll('.play-btn');
+    const loopButtons = document.querySelectorAll('.loop-btn');
+
+    function togglePlay(index) {
+        const audio = audios[index];
+        const btn = playButtons[index];
+
+        if (audio.paused) {
+            // Останавливаем все остальные
+            audios.forEach((a, i) => {
+                a.pause();
+                playButtons[i].innerText = '▶';
+                playButtons[i].parentElement.parentElement.classList.remove('playing');
+            });
+            audio.play();
+            btn.innerText = '⏸';
+            btn.parentElement.parentElement.classList.add('playing');
+        } else {
+            audio.pause();
+            btn.innerText = '▶';
+            btn.parentElement.parentElement.classList.remove('playing');
+        }
+    }
+
+    function toggleLoop(index) {
+        audios[index].loop = !audios[index].loop;
+        loopButtons[index].classList.toggle('active');
+    }
+
+    // Автопереключение на следующий трек
+    audios.forEach((audio, index) => {
+        audio.onended = () => {
+            if (!audio.loop) {
+                let next = (index + 1) % audios.length;
+                togglePlay(next);
+            }
+        };
+    });
+
+    // Функция рандома
+    function shufflePlaylist() {
+        const randomIndex = Math.floor(Math.random() * audios.length);
+        togglePlay(randomIndex);
+    }
+</script>
+
+</body>
+</html>

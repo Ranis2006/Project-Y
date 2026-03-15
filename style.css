@@ -1,0 +1,520 @@
+/* Делаем фон всей страницы */
+body {
+    overflow-x: hidden; /* Это запретит сайту прокручиваться вбок */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #1a1a2e; /* Глубокий темно-синий */
+    color: rgb(195, 249, 2);
+    text-align: center;
+}
+
+/* Стили для шапки через Flexbox */
+/* Ищем или создаем этот блок */
+.main-header h1 {
+    color: #ccff00; 
+    font-size: 2.5rem; /* Размер подбери под свой вкус */
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    /* Добавляем анимацию */
+    animation: neonGlow 3s infinite ease-in-out; 
+    transition: 0.3s;
+}
+
+/* Эффект при наведении */
+.main-header h1:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #ccff00, 0 0 50px #ccff00;
+}
+
+/* САМОЕ ВАЖНОЕ: Сама механика анимации (добавь в конец файла) */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 5px #ccff00, 0 0 10px #ccff00;
+    }
+    50% {
+        text-shadow: 0 0 15px #ccff00, 0 0 30px #ccff00;
+        transform: scale(1.02); /* Логотип чуть увеличивается, как будто "дышит" */
+    }
+    100% {
+        text-shadow: 0 0 5px #ccff00, 0 0 10px #ccff00;
+    }
+}
+
+nav a {
+    color: #e94560;            /* Розовый цвет для ссылок */
+    text-decoration: none;     /* Убираем подчеркивание */
+    margin-left: 20px;
+    font-weight: bold;
+}
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Делаем фото круглым */
+    border: 3px solid #e94560; /* Розовая рамка */
+    object-fit: cover; /* Чтобы фото не сплющилось */
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.5); /* Красивое свечение */
+}
+.feedback {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Располагаем поля друг под другом */
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px; /* Расстояние между полями */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(233, 69, 96, 0.3);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Эффект при клике на поле */
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #e94560;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form button {
+    background: #e94560;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ff5e78;
+    transform: translateY(-2px); /* Кнопка чуть подпрыгивает */
+} 
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #e94560;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #ff4d6d;
+    box-shadow: 0 0 15px rgba(233, 69, 96, 0.5);
+}
+
+.features {
+    display: flex;
+    justify-content: center; /* Центрируем блоки */
+    gap: 20px; /* Расстояние между блоками */
+    padding: 50px 20px;
+    flex-wrap: wrap; /* Чтобы на маленьких экранах блоки переносились */
+}
+
+.feature-item {
+    background: #16213e; /* Темный цвет, чуть светлее фона */
+    border: 1px solid #e94560; /* Тонкая рамка твоего цвета */
+    padding: 30px;
+    width: 280px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s; /* Плавность для эффектов */
+}
+
+/* Эффект «всплытия» при наведении */
+.feature-item:hover {
+    background: #1a1a2e;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.2);
+}
+
+.feature-item h3 {
+    color: #e94560;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.feature-item p {
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+.main-footer {
+    background-color: #0f3460; /* Еще один оттенок твоего темного синего */
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+    border-top: 2px solid #e94560; /* Линия-акцент сверху */
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: white;
+    letter-spacing: 2px; /* Прикольный эффект: буквы разъезжаются при наведении */
+}
+
+/* Добавь это в блок со стилями ссылок в футере */
+.social-links a[href*="instagram"]:hover {
+    color: #e1306c; /* Цвет Instagram */
+    text-shadow: 0 0 10px rgba(225, 48, 108, 0.4);
+}
+
+/* При наведении на ссылку, в адресе которой есть "vk" */
+.social-links a[href*="vk.com"]:hover {
+    color: #0077ff; /* Фирменный синий цвет ВК */
+    text-shadow: 0 0 10px rgba(0, 119, 255, 0.4);
+}
+
+/* Убираем подчеркивание и меняем цвет текста для ссылок-карточек */
+.feature-item {
+    text-decoration: none; /* Убирает подчеркивание */
+    display: block; /* Чтобы вся карточка была кликабельной */
+    color: inherit; /* Чтобы текст не стал синим */
+}
+
+/* Чтобы текст внутри карточки оставался светлым */
+.feature-item p {
+    color: #b0b0b0;
+}
+
+/* Добавим эффект, чтобы при наведении было понятно, что это ссылка */
+.feature-item:hover {
+    cursor: pointer;
+    border-color: white; /* Рамка станет белой при наведении */
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.6); /* Сияние */
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px; /* Увеличили расстояние между карточками */
+    padding: 40px;
+}
+
+/* Стили для самих карточек, чтобы они были одинаковой высоты */
+.music-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    background: #16213e;
+    border: 1px solid #e94560;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+}
+
+.music-section {
+    padding: 100px 20px 50px; /* Отступ сверху, чтобы меню не перекрывало заголовок */
+    text-align: center;
+}
+
+.music-section h1 {
+    color: #e94560;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Выстраиваем меню в одну линию */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+/* Выстраиваем ссылки в ряд и убираем точки */
+.nav-links {
+    list-style: none;      /* Убирает те самые зеленые точки */
+    display: flex;         /* Выстраивает пункты в ряд */
+    gap: 30px;             /* Расстояние между словами */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;       /* Дополнительная страховка для ряда */
+}
+
+.music-card {
+    background: #16213e; /* Темный фон карточки */
+    border: 1px solid #e94560;
+    border-radius: 15px;
+    padding: 25px; /* Больше места внутри */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.player-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.play-btn, .loop-btn, .main-btn {
+    background: #1a1a2e;
+    border: 2px solid #e94560;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.play-btn:hover, .main-btn:hover {
+    background: #e94560;
+    box-shadow: 0 0 10px #e94560;
+}
+
+.loop-btn.active {
+    border-color: #ccff00;
+    color: #ccff00;
+}
+
+/* Подсветка карточки, которая играет сейчас */
+.music-card.playing {
+    border-color: #ccff00;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
+}
+
+/* Общие заголовки секций */
+.section-title {
+    text-align: center;
+    color: #ccff00;
+    margin-top: 50px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* Сетка галереи */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #e94560;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    border-color: #ccff00;
+    box-shadow: 0 0 15px #ccff00;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border: 2px solid #ccff00;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px; right: 35px;
+    color: white; font-size: 40px; cursor: pointer;
+}
+
+/* Блок биографии */
+.bio-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bio-card {
+    display: flex;
+    flex-wrap: wrap; /* Чтобы на телефонах блоки вставали друг под друга */
+    gap: 40px;
+    background: #1a1a2e;
+    padding: 30px;
+    border-radius: 20px;
+    border-left: 5px solid #ccff00; /* Салатовая линия сбоку */
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.bio-image img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #e94560;
+}
+
+.bio-text {
+    flex: 1; /* Текст занимает всё свободное место */
+    color: #e2e8f0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.bio-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.bio-text li {
+    margin-bottom: 10px;
+}
+
+.bio-text li span {
+    color: #ccff00; /* Подсветка иконок/текста */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.bio-text strong {
+    color: #e94560;
+}
+
+.special-fact {
+    margin-top: 25px;
+    padding: 15px 20px;
+    background: rgba(233, 69, 96, 0.1); /* Прозрачный розовый фон */
+    border-radius: 12px;
+    border: 1px dashed #e94560; /* Пунктирная рамка */
+    position: relative;
+}
+
+.special-fact em {
+    color: #ccff00;
+    font-style: normal;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ccff00;
+}
+
+.special-fact p {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Анимация пульсации */
+@keyframes neonPulse {
+    0% { box-shadow: 0 0 10px rgba(204, 255, 0, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(204, 255, 0, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(204, 255, 0, 0.2); }
+}
+
+/* Применяем пульсацию к активной карточке (которая играет) */
+.music-card.playing {
+    border-color: #ccff00 !important;
+    animation: neonPulse 2s infinite ease-in-out;
+    transform: scale(1.02); /* Чуть-чуть увеличим для акцента */
+}
+
+.play-btn, .loop-btn, .main-btn {
+    background: transparent;
+    border: 2px solid #e94560;
+    color: #e94560;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #e94560; /* Свечение текста */
+    box-shadow: 0 0 5px #e94560; /* Свечение рамки */
+    transition: 0.3s;
+}
+
+.play-btn:hover, .main-btn:hover {
+    background: #e94560;
+    color: white;
+    box-shadow: 0 0 20px #e94560, 0 0 40px #e94560; /* Усиленное свечение */
+}
+
+/* Особое свечение для кнопки Loop и активной карточки (салатовое) */
+.loop-btn.active {
+    border-color: #ccff00;
+    color: #ccff00;
+    text-shadow: 0 0 5px #ccff00;
+    box-shadow: 0 0 15px #ccff00;
+}
+
+/* Стиль для активной ссылки в меню */
+.nav-links a.active-link {
+    color: #ccff00 !important; /* Твой салатовый цвет */
+    border-bottom: 2px solid #ccff00; /* Линия под словом */
+    padding-bottom: 5px;
+    text-shadow: 0 0 10px #ccff00; /* Неоновое свечение */
+}
+
+/* Эффект при наведении на любую ссылку (для красоты) */
+.nav-links a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+

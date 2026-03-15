@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+    <h1>Project-Y</h1>
+    <nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="index.html" class="active-link">Главная</a></li>
+        <li><a href="music.html">Музыка</a></li>
+        <li><a href="about.html">Об авторе</a></li>
+    </ul>
+</nav>
+</header>
+
+<main class="content">
+    <h2>Добро пожаловать на мой сайт!</h2>
+    <p>В этом сайте вы можете познакомиться с моей кумиром. </p>
+</main>
+
+<section class="bio-section">
+    <h2 class="section-title">Биография ROSÉ</h2>
+    <div class="bio-card">
+        <div class="bio-image">
+            <img src="img/rose15.jpg" alt="ROSÉ Bio"> </div>
+        <div class="bio-text">
+            <p><strong>Розанна Пак</strong> (более известная как <strong>ROSÉ</strong>) — южнокорейская певица и модель, участница мировой группы BLACKPINK.</p>
+            <ul>
+                <li><span> Дата рождения:</span> 11 февраля 1997 года</li>
+                <li><span> Место рождения:</span> Окленд, Новая Зеландия</li>
+                <li><span> Инструменты:</span> Гитара, фортепиано</li>
+                <li><span> Дебют:</span> 2016 год в составе BLACKPINK</li>
+            </ul>
+            <p>В 2021 году она начала сольную карьеру, выпустив альбом «-R-», а позже поразила мир хитами «On The Ground» и «APT». Её уникальный голос и стиль сделали её иконой современной музыки.</p>
+        </div>
+        <div class="special-fact">
+    <p>🎸 <strong>Интересный факт:</strong> Свою любимую гитару Розанна назвала <em>«Mazie»</em>. Она не расстается с инструментами даже на отдыхе и считает, что музыка — это лучший способ выразить те чувства, которые нельзя передать словами.</p>
+</div>
+    </div>
+</section>
+
+<section class="features">
+    <a href="https://www.distractify.com/p/what-does-apt-mean-in-rose-song" target="_blank" class="feature-item">
+        <h3>Статья</h3>
+        <p>ROSE мой кумир. Мне нравится её музыка и она сама. Хотя я её не знаю лично, мне нравится то, что она позволяет видеть публике. </p>
+    </a>
+
+    <a href="https://youtu.be/ekr2nIex040?si=S0TJmRe7QtdpGqrD" target="_blank" class="feature-item">
+        <h3>APT</h3>
+        <p>То, как Рози пела этот припев — в этом было что-то волшебное.</p>
+    </a>
+
+    <a href="https://youtu.be/eA0lHNZ1KCA?si=H_KAtAis-4M52_Tk" target="_blank" class="feature-item">
+        <h3>Toxic till the end</h3>
+        <p>Это песня стало для меня самым любимым. Для меня он очень атмосферный, мне нравится его звучание и текст.</p>
+    </a>
+</section>
+
+<section class="gallery-section">
+    <h2 class="section-title">Фотогалерея ROSÉ</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="img/rose1.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose2.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose3.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose4.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose5.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose6.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose7.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose8.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose9.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose10.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose11.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose12.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose13.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="img/rose14.jpg" alt="Rose" onclick="openModal(this.src)">
+        </div>
+    </div>
+</section>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>© 2026 Project-Y | Разработано с вдохновением</p>
+        <div class="social-links">
+            <a href="https://t.me/@rean_ii" target="_blank">Telegram</a>
+            <a href="https://www.instagram.com/rn_number.one/" target="_blank">Instagram</a>
+            <a href="https://vk.com/@id1067718997" target="_blank">VK</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function openModal(src) {
+        document.getElementById("myModal").style.display = "flex";
+        document.getElementById("img01").src = src;
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
+   
+
+</body>
+</html>

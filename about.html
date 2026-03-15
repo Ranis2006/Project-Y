@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header class="main-header">
+    <h1>Project-Y</h1>
+    <nav class="navbar">
+     <ul class="nav-links"> <li><a href="index.html">Главная</a></li>
+        <li><a href="music.html">Музыка</a></li>
+        <li><a href="about.html" class="active-link">Об авторе</a></li>
+    </ul>
+</nav>
+</header>
+
+<main class="content">
+    <h2>Немного обо мне</h2>
+    <p>Я создаю этот сайт и учусь веб-разработке!</p>
+    <p> Пожалуйста, поддержите меня!</p>
+    <div class="my-photo-container">
+        <img src="img/rose.jpeg" alt="Мой кумир" class="profile-pic">
+    </div>
+</main> 
+
+<section class="feedback">
+    <h3>Оцените мою работу:</h3>
+    <form class="contact-form" action="https://formspree.io/f/mdawdpwb" method="POST">
+        
+        <input type="hidden" name="_next" value="thanks.html">
+
+        <input type="text" name="name" placeholder="Твое имя" required>
+        <input type="email" name="email" placeholder="Твой Email" required>
+        <textarea name="message" placeholder="Твое сообщение" rows="5" required></textarea>
+        
+        <button type="submit">Отправить</button>
+    </form>
+</section>
+    
+</body>
+</html>
