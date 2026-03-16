@@ -357,6 +357,21 @@ nav a {
     box-shadow: 0 0 15px #ccff00;
 }
 
+/* Специальные стили для телефонов */
+@media (max-width: 600px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* 1fr означает одну колонку на всю ширину */
+        gap: 20px; /* Расстояние между карточками */
+        padding: 10px;
+    }
+
+    .music-card {
+        width: 100%; /* Карточка занимает всю ширину */
+        max-width: none; /* Убираем ограничения, если они были */
+    }
+}
+
 /* Модальное окно */
 .modal {
     display: none;
