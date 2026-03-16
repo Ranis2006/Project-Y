@@ -358,17 +358,17 @@ nav a {
 }
 
 /* Специальные стили для телефонов */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .gallery-grid {
-        display: grid;
-        grid-template-columns: 1fr; /* 1fr означает одну колонку на всю ширину */
-        gap: 20px; /* Расстояние между карточками */
-        padding: 10px;
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Строго одна колонка */
+        gap: 20px !important;
+        padding: 10px !important;
+        width: 100% !important;
     }
 
-    .music-card {
-        width: 100%; /* Карточка занимает всю ширину */
-        max-width: none; /* Убираем ограничения, если они были */
+    .gallery-item { /* На скриншоте у тебя элементы называются gallery-item */
+        width: 100% !important;
     }
 }
 
