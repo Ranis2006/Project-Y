@@ -196,12 +196,6 @@ nav a {
     letter-spacing: 2px; /* Прикольный эффект: буквы разъезжаются при наведении */
 }
 
-/* Добавь это в блок со стилями ссылок в футере */
-.social-links a[href*="instagram"]:hover {
-    color: #e1306c; /* Цвет Instagram */
-    text-shadow: 0 0 10px rgba(225, 48, 108, 0.4);
-}
-
 /* При наведении на ссылку, в адресе которой есть "vk" */
 .social-links a[href*="vk.com"]:hover {
     color: #0077ff; /* Фирменный синий цвет ВК */
@@ -518,17 +512,15 @@ nav a {
     text-shadow: 0 0 10px #ffffff;
 }
 
-/* Цвет для ссылки YouTube */
-.social-links a[href*="youtube.com"] {
-    color: #FF0000; /* Тот самый красный цвет YouTube */
+/* Оставляем только это для YouTube */
+.yt-link {
+    color: #e94560 !important;
     font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s; /* Чтобы цвет менялся плавно */
+    text-decoration: none !important;
 }
 
-/* Эффект при наведении */
-.social-links a[href*="youtube.com"]:hover {
-    color: #cc0000; /* Чуть темнее при наведении */
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Легкое свечение */
+.yt-link:hover {
+    color: #ff0202 !important;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
