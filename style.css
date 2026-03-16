@@ -357,18 +357,28 @@ nav a {
     box-shadow: 0 0 15px #ccff00;
 }
 
-/* Специальные стили для телефонов */
-@media screen and (max-width: 600px) {
+/* СЕКРЕТНЫЙ КОД ДЛЯ МОБИЛЬНОЙ ВЕРСИИ */
+@media screen and (max-width: 768px) {
+    /* Ломаем сетку и превращаем её в список */
     .gallery-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* Строго одна колонка */
-        gap: 20px !important;
-        padding: 10px !important;
+        display: block !important; 
         width: 100% !important;
+        padding: 10px !important;
     }
 
-    .gallery-item { /* На скриншоте у тебя элементы называются gallery-item */
+    /* Каждая карточка становится самостоятельной и широкой */
+    .gallery-item {
+        display: block !important;
+        width: 95% !important;
+        margin: 0 auto 30px auto !important; /* Центрируем и делаем отступ снизу */
+        float: none !important; /* На всякий случай убираем обтекание */
+    }
+
+    /* Картинки подстраиваются под ширину */
+    .gallery-item img {
         width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
     }
 }
 
