@@ -518,3 +518,17 @@ nav a {
     text-shadow: 0 0 10px #ffffff;
 }
 
+/* Цвет для ссылки YouTube */
+.social-links a[href*="youtube.com"] {
+    color: #FF0000; /* Тот самый красный цвет YouTube */
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s; /* Чтобы цвет менялся плавно */
+}
+
+/* Эффект при наведении */
+.social-links a[href*="youtube.com"]:hover {
+    color: #cc0000; /* Чуть темнее при наведении */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Легкое свечение */
+}
+
